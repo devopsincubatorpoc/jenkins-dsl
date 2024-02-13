@@ -8,7 +8,7 @@ pipelineJob("test-slave1") {
           remote {
             url('https://github.com/jenkinsci/job-dsl-plugin.git')
           }
-          branch('*/master')
+          branch('*/main')
         }
       }
 }			
