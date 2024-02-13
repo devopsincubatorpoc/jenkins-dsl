@@ -67,4 +67,3 @@ pipelineJob("test-slave1") {
 			}
 		}
 	}
-}
