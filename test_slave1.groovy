@@ -14,3 +14,20 @@ pipelineJob("test-slave1") {
    }
 }
 }
+
+pipelineJob("test-slave2") {
+	description()
+	keepDependencies(false)
+	definition {
+		cpsScm {
+			scm {
+        git {
+          remote {
+            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
+          }
+          branch('*/develop')
+        }
+      }
+    }
+  }
+}
