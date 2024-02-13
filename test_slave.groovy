@@ -6,7 +6,7 @@ pipelineJob("test-master") {
 			scm {
         git {
           remote {
-            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
+            url('https://github.com/devopsincubatorpoc/pipelinespoc.git')
           }
           branch('*/main')
         }
@@ -23,7 +23,7 @@ pipelineJob("test-slave1") {
 			scm {
         git {
           remote {
-            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
+            url('https://github.com/devopsincubatorpoc/pipelinespoc.git')
           }
           branch('*/develop')
         }
@@ -40,7 +40,7 @@ pipelineJob("test-slave2") {
 			scm {
         git {
           remote {
-            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
+            url('https://github.com/devopsincubatorpoc/pipelinespoc.git')
           }
           branch('*/release')
         }
