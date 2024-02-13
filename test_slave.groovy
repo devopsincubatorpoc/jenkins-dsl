@@ -1,4 +1,4 @@
-pipelineJob("test-slave1") {
+pipelineJob("test-master") {
 	description()
 	keepDependencies(false)
 	definition {
@@ -15,7 +15,7 @@ pipelineJob("test-slave1") {
 }
 }
 
-pipelineJob("test-slave2") {
+pipelineJob("test-slave1") {
 	description()
 	keepDependencies(false)
 	definition {
@@ -26,6 +26,23 @@ pipelineJob("test-slave2") {
             url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
           }
           branch('*/develop')
+        }
+      }
+    }
+  }
+}
+
+pipelineJob("test-slave2") {
+	description()
+	keepDependencies(false)
+	definition {
+		cpsScm {
+			scm {
+        git {
+          remote {
+            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
+          }
+          branch('*/release')
         }
       }
     }
