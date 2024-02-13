@@ -6,7 +6,7 @@ pipelineJob("test-slave1") {
 			scm {
         git {
           remote {
-            url('https://github.com/devopsincubatorpoc/jenkins-dsl.git')
+            url('git@github.com:devopsincubatorpoc/pipelinespoc.git')
           }
           branch('*/main')
         }
