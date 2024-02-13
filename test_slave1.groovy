@@ -3,6 +3,15 @@ pipelineJob("test-slave1") {
 	keepDependencies(false)
 	definition {
 		cpsScm {
+			scm {
+        git {
+          remote {
+            url('https://github.com/jenkinsci/job-dsl-plugin.git')
+          }
+          branch('*/master')
+        }
+      }
+}			
 """pipeline {
     agent {
         node ('slave1')
