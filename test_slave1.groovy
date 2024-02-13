@@ -11,4 +11,6 @@ pipelineJob("test-slave1") {
           branch('*/main')
         }
       }
+   }
+}
 }
