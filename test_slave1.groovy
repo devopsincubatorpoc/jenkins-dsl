@@ -56,14 +56,3 @@ pipelineJob("test-slave1") {
     }
 }"""		}
 	}
-	disabled(false)
-	configure {
-		it / 'properties' / 'jenkins.model.BuildDiscarderProperty' {
-			strategy {
-				'daysToKeep'('1')
-				'numToKeep'('2')
-				'artifactDaysToKeep'('-1')
-				'artifactNumToKeep'('-1')
-			}
-		}
-	}
