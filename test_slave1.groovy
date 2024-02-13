@@ -1,4 +1,4 @@
-pipelineJob("test-slave") {
+pipelineJob("test-slave1") {
 	description()
 	keepDependencies(false)
 	definition {
